@@ -13,6 +13,9 @@ import { unifiedConditional } from 'unified-conditional'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    unoptimized: process.env.NODE_ENV === 'development',
+  },
   output: "export",
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
 }
