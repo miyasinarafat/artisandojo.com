@@ -12,12 +12,12 @@ export function Whoyouare() {
         <div className="mx-auto max-w-4xl">
           <div className="max-w-xl">
             <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
-              Who's building ArtisanDojo?
+              Who&apos;s building ArtisanDojo?
             </h2>
             <p className="mt-10 text-center font-display text-sm tracking-wider text-white sm:text-left">
-              Hi, <strong>I'm Iyasin</strong>. I've been building web <strong>applications for over 6 years</strong>.
-              I've worked with startups, small businesses, and large enterprises to develop and scale their web applications.
-              People call me a <strong>"Full Stack" engineer</strong> but I prefer to call myself a problem solver :)
+              Hi, <strong>I&apos;m Iyasin</strong>. I&apos;ve been building web <strong>applications for over 6 years</strong>.
+              I&apos;ve worked with startups, small businesses, and large enterprises to develop and scale their web applications.
+              People call me a <strong>&quot;Full Stack&quot; engineer</strong> but I prefer to call myself a problem solver :)
             </p>
             <p className="mt-8 text-center font-display text-sm tracking-wider text-white sm:text-left">
               I started ArtisanDojo to help businesses build their <strong>E-commerce Marketplace presence</strong>, providing unique solutions that stand out and scale well.

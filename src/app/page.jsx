@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { ContactSection } from '@/components/ContactSection'
 import { Whoyouare } from '@/components/Whoyouare'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -269,7 +268,7 @@ function ContactForm() {
                         To begin, could you please <strong>describe your solution idea</strong> or a problem you are
                         facing?
                     </h2>
-                    <p>Tell us about your ideas, challenges, or the specific solution you're looking for. The more we
+                    <p>Tell us about your ideas, challenges, or the specific solution you&apos;re looking for. The more we
                         know, the better we can assist you.</p>
                     <TextInput label="Message" name="message"/>
                 </div>
@@ -277,7 +276,7 @@ function ContactForm() {
                     <h2 className="text-left font-display text-2xl">
                         Do you have an <strong>estimated budget</strong> for this project?
                     </h2>
-                    <p>Even if you're not sure about the exact amount, giving us a rough estimate helps us understand
+                    <p>Even if you&apos;re not sure about the exact amount, giving us a rough estimate helps us understand
                         your expectations.</p>
                     <fieldset>
                         <legend className="text-base/6 text-neutral-500">Budget</legend>
