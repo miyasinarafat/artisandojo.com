@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ContactSection } from '@/components/ContactSection'
+import { Whoyouare } from '@/components/Whoyouare'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
@@ -220,7 +221,6 @@ function Services() {
   )
 }
 
-
 function TextInput({ label, ...props }) {
   let id = useId()
 
@@ -423,7 +423,7 @@ export default async function Home() {
 
       <Services />
 
-      <ContactSection />
+      <Whoyouare />
       <Contactus />
     </>
   )
