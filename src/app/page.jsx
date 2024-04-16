@@ -20,6 +20,15 @@ import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
 
+import amazon from '@/images/marketplaces/amazon.svg'
+import walmart from '@/images/marketplaces/walmart.svg'
+import etsy from '@/images/marketplaces/etsy.svg'
+import shopify from '@/images/marketplaces/shopify.svg'
+import ebay from '@/images/marketplaces/ebay.svg'
+import zalando from '@/images/marketplaces/zalando.svg'
+import kaufland from '@/images/marketplaces/kaufland.svg'
+import aboutyou from '@/images/marketplaces/aboutyou.svg'
+
 const clients = [
   ['Phobia', logoPhobiaLight],
   ['Family Fund', logoFamilyFund],
@@ -29,6 +38,17 @@ const clients = [
   ['Green Life', logoGreenLife],
   ['Bright Path', logoBrightPath],
   ['North Adventures', logoNorthAdventures],
+]
+
+const marketplaces = [
+  ['Amazon', amazon],
+  ['Walmart', walmart],
+  ['Etsy', etsy],
+  ['Shopify', shopify],
+  ['ebay', ebay],
+  ['Zalando', zalando],
+  ['About You', aboutyou],
+  ['Kaufland', kaufland],
 ]
 
 function Clients() {
@@ -57,6 +77,34 @@ function Clients() {
         </FadeInStagger>
       </Container>
     </div>
+  )
+}
+function Marketplaces() {
+  return (
+      <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+        <Container>
+          <FadeIn className="flex items-center gap-x-8">
+            <h2 className="text-center font-display text-2xl font-semibold tracking-wider text-white sm:text-left">
+              Unleash your ecommerce marketplace potential
+            </h2>
+            <div className="h-px flex-auto bg-neutral-800" />
+          </FadeIn>
+          <FadeInStagger faster>
+            <ul
+                role="list"
+                className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            >
+              {marketplaces.map(([marketplace, logo]) => (
+                  <li key={marketplace}>
+                    <FadeIn>
+                      <Image className="bg-white p-2.5 rounded-2xl" src={logo} alt={marketplace} unoptimized />
+                    </FadeIn>
+                  </li>
+              ))}
+            </ul>
+          </FadeInStagger>
+        </Container>
+      </div>
   )
 }
 
@@ -141,24 +189,24 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
-            </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Marketplace Data Integration">
+              Automate your reporting to gain better insights into sales, inventory, and more by connecting with your favorite tools.
             </ListItem>
             <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+              We custom design your Shopify store to match your brand vision.
+              Our team utilizes our proprietary project management process to bring your brand to life and keep projects on time.
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Custom Software Development">
+              Develop custom web applications tailored to meet your unique challenges and transform them into profitable SaaS/Subscription products.
+            </ListItem>
+            <ListItem title="Amazon SP-API Migration">
+              Transition smoothly from Amazon MWS to the latest SP-API with our expert migration services.
+            </ListItem>
+            <ListItem title="Marketplace Data Extraction">
+              Extract vital marketplace data with precision to better understand market trends and customer behavior.
+            </ListItem>
+            <ListItem title="Internal Workflow Automations">
+              Automate manual processes to save time, reduce errors, and allow your team to concentrate on sales growth.
             </ListItem>
           </List>
         </div>
@@ -189,9 +237,10 @@ export default async function Home() {
         </FadeIn>
       </Container>
 
-      <Clients />
+      <Marketplaces />
+      {/*<Clients />*/}
 
-      <CaseStudies caseStudies={caseStudies} />
+      {/*<CaseStudies caseStudies={caseStudies} />*/}
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
