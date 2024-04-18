@@ -17,7 +17,12 @@ import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
-import { loadCaseStudies } from '@/lib/mdx'
+
+
+import talismik from '@/images/works/talismik.png'
+import lulubuy from '@/images/works/lulubuy.jpg'
+import iot2market from '@/images/works/iot2market.png'
+import nSales from '@/images/works/nSales.jpeg'
 
 import amazon from '@/images/marketplaces/amazon.svg'
 import walmart from '@/images/marketplaces/walmart.svg'
@@ -55,6 +60,41 @@ const marketplaces = [
   ['Zalando', zalando],
   ['About You', aboutyou],
   ['Kaufland', kaufland],
+]
+
+const works = [
+    {
+        logo: talismik,
+        href: 'https://talismik.com/',
+        client: 'Talismik',
+        date: '2024',
+        title: 'Your Gateway to Unbeatable Deals on Every Product',
+        description: 'Discover the ultimate shopping destination at Talismik, where you\'ll find a diverse range of products at prices that defy the market.',
+    },
+    {
+        logo: lulubuy,
+        href: 'https://lulubuy.lu/',
+        client: 'Lulubuy',
+        date: '2023',
+        title: 'E-Commerce Mastery: Revolutionizing B2B and B2C Distribution',
+        description: 'Explore their unrivaled e-commerce solutions, from flawless B2B/B2C distribution to expert Amazon Vendor Central delegation.',
+    },
+    {
+        logo: iot2market,
+        href: 'https://www.iot2market.com/',
+        client: 'IoT2Market',
+        date: '2020',
+        title: 'A leading marketplace for the IoT ecosystem',
+        description: 'They connect local and global buyers and suppliers, and guide them through the jungle of IoT products and services worldwide.',
+    },
+    {
+        logo: nSales,
+        href: 'https://nsales.dk/',
+        client: 'nSales',
+        date: '2019',
+        title: 'A leader in sales optimizing solutions for the wholesale industry',
+        description: 'Sales order management tool and B2B and B2C ecommerce solutions has helped companies worldwide grow sales, increase customer satisfaction, eliminate order entry errors and reduce administrative work.',
+    },
 ]
 
 function Clients() {
@@ -114,7 +154,7 @@ function Marketplaces() {
   )
 }
 
-function CaseStudies({ caseStudies }) {
+function Works({ works }) {
   return (
     <>
       <SectionIntro
@@ -122,44 +162,43 @@ function CaseStudies({ caseStudies }) {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+            Together with our clients, we&apos;ve accomplished amazing things.
+            Here are some of the organizations that make our work exciting and rewarding.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="flex">
+          {works.map((work) => (
+            <FadeIn key={work.href} className="flex">
               <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
                 <h3>
-                  <Link href={caseStudy.href}>
+                  <Link href={work.href}>
                     <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
+                      <Image
+                          src={work.logo}
+                          alt={work.client}
+                          className="h-16 w-16 rounded-2xl"
+                          unoptimized
+                      />
                   </Link>
                 </h3>
                 <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
                   <time
-                    dateTime={caseStudy.date.split('-')[0]}
+                    dateTime={work.date.split('-')[0]}
                     className="font-semibold"
                   >
-                    {caseStudy.date.split('-')[0]}
+                    {work.date.split('-')[0]}
                   </time>
                   <span className="text-neutral-300" aria-hidden="true">
                     /
                   </span>
-                  <span>Case study</span>
+                  <span>{work.client}</span>
                 </p>
                 <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
+                  {work.title}
                 </p>
                 <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
+                  {work.description}
                 </p>
               </article>
             </FadeIn>
@@ -422,8 +461,6 @@ export const metadata = {
 }
 
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
-
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
@@ -441,7 +478,7 @@ export default async function Home() {
       <Marketplaces />
       {/*<Clients />*/}
 
-      {/*<CaseStudies caseStudies={caseStudies} />*/}
+      <Works works={works} />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
