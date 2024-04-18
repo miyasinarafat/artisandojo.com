@@ -248,11 +248,11 @@ function Services() {
               Automate your reporting to gain better insights into sales, inventory, and more by connecting with your favorite tools.
             </ListItem>
             <ListItem title="E-commerce">
-              We custom design your Shopify store to match your brand vision.
+              We custom design your Shopify/E-commerce store to match your brand vision.
               Our team utilizes our proprietary project management process to bring your brand to life and keep projects on time.
             </ListItem>
             <ListItem title="Custom Software Development">
-              Develop custom web applications tailored to meet your unique challenges and transform them into profitable SaaS/Subscription products.
+              Develop custom web applications tailored to meet your unique challenges and transform them into profitable SaaS/Subscription/Marketplace products.
             </ListItem>
             <ListItem title="Amazon SP-API Migration">
               Transition smoothly from Amazon MWS to the latest SP-API with our expert migration services.
