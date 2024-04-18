@@ -85,15 +85,15 @@ const works = [
         client: 'IoT2Market',
         date: '2020',
         title: 'A leading marketplace for the IoT ecosystem',
-        description: 'They connect local and global buyers and suppliers, and guide them through the jungle of IoT products and services worldwide.',
+        description: 'IoT2Market connect local and global buyers and suppliers, and guide them through the jungle of IoT products and services worldwide.',
     },
     {
         logo: nSales,
         href: 'https://nsales.dk/',
         client: 'nSales',
         date: '2019',
-        title: 'A leader in sales optimizing solutions for the wholesale industry',
-        description: 'Sales order management tool and B2B and B2C ecommerce solutions has helped companies worldwide grow sales, increase customer satisfaction, eliminate order entry errors and reduce administrative work.',
+        title: 'A leader in sales optimizing solutions for the B2B/B2C industry',
+        description: 'nSales sales order management tool, along with B2B and B2C e-commerce solutions, boosts global sales, enhances customer satisfaction, cuts order errors, and reduces administrative tasks.',
     },
 ]
 
