@@ -21,6 +21,7 @@ import imageLaptop from '@/images/laptop.jpg'
 
 import talismik from '@/images/works/talismik.png'
 import lulubuy from '@/images/works/lulubuy.jpg'
+import valodam from '@/images/works/valodam.jpg'
 import iot2market from '@/images/works/iot2market.png'
 import nSales from '@/images/works/nSales.jpeg'
 
@@ -77,7 +78,15 @@ const works = [
         client: 'Lulubuy',
         date: '2023',
         title: 'E-Commerce Mastery: Revolutionizing B2B and B2C Distribution',
-        description: 'Explore their unrivaled e-commerce solutions, from flawless B2B/B2C distribution to expert Amazon Vendor Central delegation.',
+        description: 'Explore Lulubuy\'s unrivaled e-commerce solutions, from flawless B2B/B2C distribution to expert Amazon Vendor Central delegation.',
+    },
+    {
+        logo: valodam,
+        href: 'https://www.valodam.com/',
+        client: 'Valodam',
+        date: '2023',
+        title: 'Online B2C Market in Bangladesh',
+        description: 'Valodam provides top-quality products, great prices, fast delivery, and exceptional customer support. Your go-to online shopping destination in Bangladesh!',
     },
     {
         logo: iot2market,
@@ -85,7 +94,7 @@ const works = [
         client: 'IoT2Market',
         date: '2020',
         title: 'A leading marketplace for the IoT ecosystem',
-        description: 'IoT2Market connect local and global buyers and suppliers, and guide them through the jungle of IoT products and services worldwide.',
+        description: 'IoT2Market connects local and global buyers and suppliers, guiding them through the jungle of IoT products and services worldwide.',
     },
     {
         logo: nSales,
@@ -93,7 +102,7 @@ const works = [
         client: 'nSales',
         date: '2019',
         title: 'A leader in sales optimizing solutions for the B2B/B2C industry',
-        description: 'nSales sales order management tool, along with B2B and B2C e-commerce solutions, boosts global sales, enhances customer satisfaction, cuts order errors, and reduces administrative tasks.',
+        description: 'nSales sales order management tool and B2B & B2C e-commerce solutions boost global sales, enhance customer satisfaction, cut order errors, and reduce administrative tasks.',
     },
 ]
 
