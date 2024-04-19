@@ -284,7 +284,7 @@ function TextInput({ label, ...props }) {
         />
         <label
             htmlFor={id}
-            className="pointer-events-none absolute top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
+            className="pointer-events-none absolute top-1/2 -mt-3 origin-left text-base/6 text-neutral-800 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
         >
           {label}
         </label>
@@ -306,7 +306,7 @@ function TextareaInput({ label, ...props }) {
         </textarea>
         <label
             htmlFor={id}
-            className="pointer-events-none absolute top-8 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
+            className="pointer-events-none absolute top-8 -mt-3 origin-left text-base/6 text-neutral-800 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
         >
           {label}
         </label>
@@ -347,7 +347,7 @@ function ContactForm() {
                     </h3>
                     <p className="text-base text-neutral-600">Even if you&apos;re not sure about the exact amount, giving us a rough estimate helps us understand your expectations.</p>
                     <fieldset className="mt-2">
-                        <legend className="text-base text-neutral-500">Budget</legend>
+                        <legend className="text-base text-neutral-800">Budget</legend>
                         <div className="mt-4 grid grid-cols-1 gap-8 sm:grid-cols-2">
                             <RadioInput label="$3K – $10K" name="budget" value="3-10"/>
                             <RadioInput label="$10K – $25K" name="budget" value="10-25"/>
