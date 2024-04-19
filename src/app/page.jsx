@@ -280,11 +280,33 @@ function TextInput({ label, ...props }) {
             id={id}
             {...props}
             placeholder=""
-            className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+            className="peer block w-full border-0 border-b border-neutral-300 bg-transparent pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none"
         />
         <label
             htmlFor={id}
-            className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
+            className="pointer-events-none absolute top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
+        >
+          {label}
+        </label>
+      </div>
+  )
+}
+function TextareaInput({ label, ...props }) {
+  let id = useId()
+
+  return (
+      <div className="group relative z-0 transition-all focus-within:z-10">
+        <textarea
+            rows="2"
+            id={id}
+            {...props}
+            placeholder=""
+            className="peer block w-full border-0 border-b border-neutral-300 bg-transparent pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none"
+        >
+        </textarea>
+        <label
+            htmlFor={id}
+            className="pointer-events-none absolute top-8 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
         >
           {label}
         </label>
@@ -306,31 +328,27 @@ function RadioInput({ label, ...props }) {
 }
 
 function ContactForm() {
-  return (
-      <FadeIn className="lg:order-last">
-        <form>
-          <h2 className="font-display text-base font-semibold text-neutral-950">
-            Work inquiries
-          </h2>
-            <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
+    return (
+        <FadeIn className="lg:order-last">
+            <h2 className="font-display text-base font-semibold text-neutral-950">
+                Work inquiries
+            </h2>
+            <form className="space-y-10 mt-6 p-6 bg-white border border-neutral-300 rounded-t-2xl rounded-b-2xl">
                 <div>
-                    <h2 className="text-left font-display text-2xl">
-                        To begin, could you please <strong>describe your solution idea</strong> or a problem you are
-                        facing?
-                    </h2>
-                    <p>Tell us about your ideas, challenges, or the specific solution you&apos;re looking for. The more we
-                        know, the better we can assist you.</p>
-                    <TextInput label="Message" name="message"/>
+                    <h3 className="font-display text-xl">
+                        To begin, could you please <strong>describe your solution idea</strong> or a problem you are facing? *
+                    </h3>
+                    <p className="text-base text-neutral-600">Tell us about your ideas, challenges, or the specific solution you&apos;re looking for. The more we know, the better we can assist you.</p>
+                    <TextareaInput label="Message *" name="message"/>
                 </div>
-                <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
-                    <h2 className="text-left font-display text-2xl">
+                <div>
+                    <h3 className="font-display text-xl">
                         Do you have an <strong>estimated budget</strong> for this project?
-                    </h2>
-                    <p>Even if you&apos;re not sure about the exact amount, giving us a rough estimate helps us understand
-                        your expectations.</p>
-                    <fieldset>
-                        <legend className="text-base/6 text-neutral-500">Budget</legend>
-                        <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
+                    </h3>
+                    <p className="text-base text-neutral-600">Even if you&apos;re not sure about the exact amount, giving us a rough estimate helps us understand your expectations.</p>
+                    <fieldset className="mt-2">
+                        <legend className="text-base text-neutral-500">Budget</legend>
+                        <div className="mt-4 grid grid-cols-1 gap-8 sm:grid-cols-2">
                             <RadioInput label="$3K – $10K" name="budget" value="3-10"/>
                             <RadioInput label="$10K – $25K" name="budget" value="10-25"/>
                             <RadioInput label="$25K – $100K" name="budget" value="25-100"/>
@@ -339,33 +357,21 @@ function ContactForm() {
                     </fieldset>
                 </div>
                 <div>
-                    <h2 className="text-left font-display text-2xl">
-                        <strong>Please tell us a bit about yourself.</strong>
-                    </h2>
-                    <p>We value your privacy and assure you that your data will remain confidential. We never share information with third parties.</p>
-                    <TextInput label="Name" name="name" autoComplete="name"/>
-                    <TextInput
-                        label="Email"
-                        type="email"
-                        name="email"
-                        autoComplete="email"
-                    />
+                    <h3 className="font-display text-xl">
+                        <strong>Please tell us a bit about yourself. *</strong>
+                    </h3>
+                    <p className="text-base text-neutral-600">We value your privacy and assure you that your data will remain confidential. We never share information with third parties.</p>
+                    <TextInput label="Name *" name="name" autoComplete="name"/>
+                    <TextInput label="Email *" type="email" name="email" autoComplete="email"/>
                     <TextInput label="Phone" type="tel" name="phone" autoComplete="tel"/>
-                    <TextInput
-                        label="Company"
-                        name="company"
-                        autoComplete="organization"
-                    />
+                    <TextInput label="Company" name="company" autoComplete="organization"/>
                 </div>
-
-
-            </div>
-            <Button type="submit" className="mt-10">
-                Let’s work together
-            </Button>
-        </form>
-      </FadeIn>
-  )
+                <button type="submit" className="mt-10 bg-neutral-950 text-white px-4 py-2 rounded hover:bg-neutral-700">
+                    Let’s work together
+                </button>
+            </form>
+        </FadeIn>
+    );
 }
 
 function ContactDetails() {
