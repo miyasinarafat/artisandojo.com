@@ -346,7 +346,7 @@ function ContactForm() {
                         Do you have an <strong>estimated budget</strong> for this project?
                     </h3>
                     <p className="text-base text-neutral-600">Even if you&apos;re not sure about the exact amount, giving us a rough estimate helps us understand your expectations.</p>
-                    <fieldset className="mt-2">
+                    <fieldset className="mt-4">
                         <legend className="text-base text-neutral-800">Budget</legend>
                         <div className="mt-4 grid grid-cols-1 gap-8 sm:grid-cols-2">
                             <RadioInput label="$3K – $10K" name="budget" value="3-10"/>

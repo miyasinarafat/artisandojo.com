@@ -4,43 +4,52 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
+import {Border} from "@/components/Border";
 
 const navigation = [
   {
-    title: 'Work',
+    title: 'Works',
     links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
+      { title: 'Talismik', href: 'https://talismik.com/' },
+      { title: 'Lulubuy', href: 'https://lulubuy.lu/' },
+      { title: 'Valodam', href: 'https://www.valodam.com/' },
       {
         title: (
           <>
             See all <span aria-hidden="true">&rarr;</span>
           </>
         ),
-        href: '/work',
+        href: '#works',
       },
     ],
   },
   {
     title: 'Company',
     links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'Home', href: '#home' },
+      { title: 'Services', href: '#services' },
+      { title: 'About', href: '#about' },
+      { title: 'Contact us', href: '#contact' },
     ],
   },
   {
     title: 'Connect',
     links: socialMediaProfiles,
   },
+  {
+    title: 'Policies',
+    links: [
+      { title: 'Privacy Policies', href: '/about' },
+      { title: 'Terms of Service', href: '/process' },
+      { title: 'Cookie settings', href: '/blog' },
+    ]
+  },
 ]
 
 function Navigation() {
   return (
     <nav>
-      <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+      <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-4">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
             <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
@@ -113,14 +122,17 @@ function NewsletterForm() {
 export function Footer() {
   return (
     <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
-      {/*<FadeIn>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+      <FadeIn>
+
+        <Border className="pt-16">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16"> {/*lg:grid-cols-2*/}
           <Navigation />
-          <div className="flex lg:justify-end">
+          {/*<div className="flex lg:justify-end">
             <NewsletterForm />
-          </div>
-        </div>*/}
-        <div className="mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+          </div>*/}
+        </div>
+        </Border>
+        <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
             <Logo className="h-8" fillOnHover />
           </Link>
@@ -128,7 +140,7 @@ export function Footer() {
             © {new Date().getFullYear()} ArtisanDojo. All rights reserved.
           </p>
         </div>
-      {/*</FadeIn>*/}
+      </FadeIn>
     </Container>
   )
 }
