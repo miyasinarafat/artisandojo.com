@@ -263,6 +263,9 @@ function Services() {
             <ListItem title="Internal Workflow Automations">
               Automate manual processes to save time, reduce errors, and allow your team to concentrate on sales growth.
             </ListItem>
+            <ListItem title="Personalized Tech Consulting">
+                Drive your business forward with our tailored consulting sessions, leveraging our engineers expertise.
+            </ListItem>
           </List>
         </div>
       </Container>
@@ -472,7 +475,7 @@ function Testimonial({ children, client, className }) {
 
 export const metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'We are a software development agency dedicated to helping businesses enhance their marketplace sales through technology and innovation.',
 }
 
 export default async function Home() {
