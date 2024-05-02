@@ -497,7 +497,7 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client="Naimul Islam, CEO of Proficient IT Solutions"
+        client="Benjamin Delorme, Head of Engineering at LULUBUY"
       >
           Iyasin&apos;s software engineering skills and leadership have significantly enhanced our technical capabilities,
           driving growth and success across multiple complex projects in the competitive e-commerce landscape.
