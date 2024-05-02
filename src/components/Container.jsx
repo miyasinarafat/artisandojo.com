@@ -1,10 +1,10 @@
 import clsx from 'clsx'
 
-export function Container({ as, className, children }) {
+export function Container({ as, className, children, ...props}) {
   let Component = as ?? 'div'
 
   return (
-    <Component className={clsx('mx-auto max-w-7xl px-6 lg:px-8', className)}>
+    <Component className={clsx('mx-auto max-w-7xl px-6 lg:px-8', className)} {...props}>
       <div className="mx-auto max-w-2xl lg:max-w-none">{children}</div>
     </Component>
   )

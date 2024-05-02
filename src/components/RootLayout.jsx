@@ -54,7 +54,7 @@ function Header({
     <Container>
       <div className="flex items-center justify-between">
         <Link
-          href="/"
+          href="/#home"
           aria-label="Home"
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
@@ -66,7 +66,7 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
+          <Button href="/#contact" invert={invert}>
             Contact us
           </Button>
           {/*<button
@@ -160,7 +160,7 @@ function RootLayoutInner({ children }) {
 
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
-      <header>
+      <header id="home">
         <div
           className="absolute left-0 right-0 top-2 z-40 pt-14"
           aria-hidden={expanded ? 'true' : undefined}

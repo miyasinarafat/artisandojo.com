@@ -52,7 +52,7 @@ export function Whoyouare() {
       </FadeIn>
     </Container>*/
 
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <Container className="mt-24 sm:mt-32 lg:mt-40" id="about">
         <FadeIn className="-mx-6 rounded-4xl bg-neutral-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
           <div className="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-4 gap-8">
             <div className="col-span-3">

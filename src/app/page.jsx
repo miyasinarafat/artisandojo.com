@@ -169,6 +169,7 @@ function Works({ works }) {
       <SectionIntro
         title="Harnessing technology for a brighter future"
         className="mt-24 sm:mt-32 lg:mt-40"
+        id="works"
       >
         <p>
             Together with our clients, we&apos;ve accomplished amazing things.
@@ -225,6 +226,7 @@ function Services() {
         eyebrow="Services"
         title="We help you identify, explore and respond to new opportunities."
         className="mt-24 sm:mt-32 lg:mt-40"
+        id="services"
       >
         <p>
           As long as those opportunities involve giving us money to re-purpose
@@ -428,19 +430,20 @@ function Contactus() {
                 eyebrow="Contact us"
                 title="Let’s work together"
                 className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          Tell us about your project, We can’t wait to hear from you.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
-          <ContactForm />
-          <ContactDetails />
-        </div>
-      </Container>
-    </>
-  )
+                id="contact"
+            >
+                <p>
+                    Tell us about your project, We can’t wait to hear from you.
+                </p>
+            </SectionIntro>
+            <Container className="mt-16">
+                <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
+                    <ContactForm/>
+                    <ContactDetails/>
+                </div>
+            </Container>
+        </>
+    )
 }
 
 function Testimonial({ children, client, className }) {
