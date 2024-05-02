@@ -366,8 +366,8 @@ function ContactForm() {
                     <TextInput label="Phone" type="tel" name="phone" autoComplete="tel"/>
                     <TextInput label="Company" name="company" autoComplete="organization"/>
                 </div>
-                <button type="submit" className="mt-10 bg-neutral-950 text-white px-4 py-2 rounded hover:bg-neutral-700">
-                    Let’s work together
+                <button type="submit" className="mt-10 inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition bg-neutral-950 text-white hover:bg-neutral-800">
+                    <span className="relative top-px">Let’s work together</span>
                 </button>
             </form>
         </FadeIn>
