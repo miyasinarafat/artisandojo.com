@@ -29,7 +29,7 @@ const navigation = [
       { title: 'Home', href: '/#home' },
       { title: 'Services', href: '/#services' },
       { title: 'About', href: '/#about' },
-      { title: 'Contact us', href: '/#contact' },
+      { title: 'Contact Us', href: '/#contact' },
     ],
   },
   {
@@ -41,7 +41,7 @@ const navigation = [
     links: [
       { title: 'Privacy Policy', href: '/privacy-policy' },
       { title: 'Terms and Conditions', href: '/terms-and-conditions' },
-      { title: 'Cookie settings', href: '/blog' },
+      { title: 'Cookie Settings', href: '/blog' },
     ]
   },
 ]
