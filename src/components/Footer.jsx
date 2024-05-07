@@ -19,17 +19,17 @@ const navigation = [
             See all <span aria-hidden="true">&rarr;</span>
           </>
         ),
-        href: '#works',
+        href: '/#works',
       },
     ],
   },
   {
     title: 'Company',
     links: [
-      { title: 'Home', href: '#home' },
-      { title: 'Services', href: '#services' },
-      { title: 'About', href: '#about' },
-      { title: 'Contact us', href: '#contact' },
+      { title: 'Home', href: '/#home' },
+      { title: 'Services', href: '/#services' },
+      { title: 'About', href: '/#about' },
+      { title: 'Contact us', href: '/#contact' },
     ],
   },
   {
@@ -39,7 +39,7 @@ const navigation = [
   {
     title: 'Policies',
     links: [
-      { title: 'Privacy Policies', href: '/about' },
+      { title: 'Privacy Policy', href: '/privacy-policy' },
       { title: 'Terms of Service', href: '/process' },
       { title: 'Cookie settings', href: '/blog' },
     ]
