@@ -33,7 +33,7 @@ export default function CookieBanner() {
         <div className="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6">
             <div className="pointer-events-auto max-w-xs rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-900/10">
                 <p className="text-sm leading-6 text-gray-900">
-                    We value your privacy. We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Allow Cookies", you consent to our use of cookies. See our{' '}
+                    We value your privacy. We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking &quot;Allow Cookies&quot;, you consent to our use of cookies. See our{' '}
                     <Link
                         href='/privacy-policy'
                         className="font-semibold text-indigo-600"
