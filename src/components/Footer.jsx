@@ -40,7 +40,7 @@ const navigation = [
     title: 'Policies',
     links: [
       { title: 'Privacy Policy', href: '/privacy-policy' },
-      { title: 'Terms of Service', href: '/process' },
+      { title: 'Terms of Service', href: '/terms-of-service' },
       { title: 'Cookie settings', href: '/blog' },
     ]
   },
