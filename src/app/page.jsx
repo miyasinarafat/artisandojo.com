@@ -40,6 +40,7 @@ import {Border} from "@/components/Border";
 import {SocialMedia} from "@/components/SocialMedia";
 import clsx from "clsx";
 import {GridPattern} from "@/components/GridPattern";
+import { EmbedContactForm } from '@/components/EmbedContactForm'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -437,9 +438,13 @@ function Contactus() {
                 </p>
             </SectionIntro>
             <Container className="mt-16">
-                <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
-                    <ContactForm/>
-                    <ContactDetails/>
+                <div className="grid grid-cols-1 sm:grid-cols-5 gap-x-8 gap-y-24">
+                  <div className="col-span-2">
+                      <ContactDetails/>
+                    </div>
+                    <div className="col-span-3">
+                      <EmbedContactForm/>
+                    </div>
                 </div>
             </Container>
         </>
