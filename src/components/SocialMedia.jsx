@@ -48,10 +48,10 @@ function TwitterIcon(props) {
 }
 
 export const socialMediaProfiles = [
-    { title: 'LinkedIn', href: 'https://instagram.com', icon: LinkedInIcon },
-    { title: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
-    { title: 'Twitter', href: 'https://facebook.com', icon: TwitterIcon },
-    { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
+    { title: 'LinkedIn', href: 'https://www.linkedin.com/company/artisandojo/', icon: LinkedInIcon },
+    // { title: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
+    // { title: 'Twitter', href: 'https://facebook.com', icon: TwitterIcon },
+    // { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
 ]
 
 export function SocialMedia({ className, invert = false }) {
