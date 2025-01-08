@@ -137,7 +137,7 @@ export function Footer() {
             <Logo className="h-10" fillOnHover />
           </Link>
           <p className="text-sm text-neutral-700">
-            © {new Date().getFullYear()} ArtisanDojo. All rights reserved.
+            © {new Date().getFullYear()} Artisan Dojo LLC. All rights reserved.
           </p>
         </div>
       </FadeIn>
