@@ -22,23 +22,25 @@ export const metadata = {
   },
 }
 
-function CommingSoon({ children, client, className }) {
-    return (
-         <div className="max-w-2xl text-center">
-            <h1 className="font-display text-4xl font-semibold tracking-tight text-neutral-950 sm:text-5xl">
-                We&apos;re building something great
-            </h1>
-            <p className="mt-4 text-lg text-neutral-600">
-                Our new site launches soon...
-            </p>
+function CommingSoon() {
+  return (
+    <main className="min-h-screen flex items-center justify-center">
+      <div className="max-w-2xl text-center px-4">
+        <h1 className="font-display text-5xl font-semibold tracking-tight text-neutral-950 sm:text-5xl">
+          We&apos;re building something great!
+        </h1>
+        <h3 className="mt-4 text-2xl text-neutral-600">
+          Our new site launches soon...
+        </h3>
       </div>
-    )
+    </main>
+  )
 }
 
 export default function Layout({ children }) {
   return (
-    <html lang="en" className="h-full bg-neutral-950 text-base antialiased">
-      <body className="flex min-h-full flex-col">
+    <html lang="en" className="h-full text-base antialiased">
+      <body>
         {/* <RootLayout>{children}</RootLayout>
         <CookieBanner/> */}
         <CommingSoon />
