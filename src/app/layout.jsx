@@ -4,9 +4,21 @@ import CookieBanner from '@/components/CookieBanner';
 import '@/styles/tailwind.css'
 
 export const metadata = {
-  title: {
-    template: '%s - ArtisanDojo',
-    default: 'ArtisanDojo - Custom Solutions for your Ecommerce Marketplace Business',
+  title: 'Artisan Dojo | Under Development',
+  description: 'We’re building something great. Our new site launches soon.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: 'Artisan Dojo | Under Development',
+    description: 'We’re building something great. Our new site launches soon.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Artisan Dojo | Under Development',
+    description: 'We’re building something great. Our new site launches soon.',
   },
 }
 

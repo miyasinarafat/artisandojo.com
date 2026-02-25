@@ -481,12 +481,26 @@ function Testimonial({ children, client, className }) {
     )
 }
 
-export const metadata = {
-  description:
-    'We are a software development agency dedicated to helping businesses enhance their marketplace sales through technology and innovation.',
+function CommingSoon({ children, client, className }) {
+    return (
+         <div className="max-w-2xl text-center">
+            <h1 className="font-display text-4xl font-semibold tracking-tight text-neutral-950 sm:text-5xl">
+                We&apos;re building something great
+            </h1>
+            <p className="mt-4 text-lg text-neutral-600">
+                Our new site launches soon...
+            </p>
+      </div>
+    )
 }
 
+// export const metadata = {
+//   description:
+//     'We are a software development agency dedicated to helping businesses enhance their marketplace sales through technology and innovation.',
+// }
+
 export default async function Home() {
+  return <CommingSoon/>;
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
