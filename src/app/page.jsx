@@ -499,7 +499,7 @@ export const metadata = {
 }
 
 export default async function Home() {
-  // return <CommingSoon/>;
+  {/* return <CommingSoon/>; */}
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
