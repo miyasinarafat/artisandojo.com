@@ -494,13 +494,12 @@ function CommingSoon({ children, client, className }) {
     )
 }
 
-// export const metadata = {
-//   description:
-//     'We are a software development agency dedicated to helping businesses enhance their marketplace sales through technology and innovation.',
-// }
+export const metadata = {
+    description: 'We are a software development agency dedicated to helping businesses enhance their marketplace sales through technology and innovation.',
+}
 
 export default async function Home() {
-  return <CommingSoon/>;
+  // return <CommingSoon/>;
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
