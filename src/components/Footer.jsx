@@ -41,7 +41,7 @@ const navigation = [
     links: [
       { title: 'Privacy Policy', href: '/privacy-policy' },
       { title: 'Terms and Conditions', href: '/terms-and-conditions' },
-      { title: 'Cookie Settings', href: '/blog' },
+      { title: 'Cookie Settings', href: '/privacy-policy' },
     ]
   },
 ]
